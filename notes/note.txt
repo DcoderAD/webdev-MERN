@@ -1,0 +1,7 @@
+1.link:css tag ko head me likhe
+2.script tag added just befor body  tag or in the head tag both learn the differenc 
+3.html contant will auto update but if you change css content you may need to reload the page   
+4.meta:des  is important tag for websites description so use i.
+how to see it in your phone.just open terminal and write ipconfig.copy the ipv4 address and paste it into live previews local ip.and restart the vscode and also makesure that your wifi shoud be on private network .now the address you see in live preview ...use it in your phone to see the website in the phone.
+always set width or height of a image.set atleast one attribute
+table=>thead,tbody,tfoot. do this grouping so you can later target it using cssx

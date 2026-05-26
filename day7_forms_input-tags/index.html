@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in html</title>
+  </head>
+  <body>
+    <h1>Form to apply TA</h1>
+    <!-- action may be get or post -->
+    <!-- passwords are send using post request -->
+    <!-- key value pair me name and value jayega server mem study karenge -->
+    <!-- get is a simple request and post req.used to send lots of data -->
+    <!-- we give label to a input tag -means input tag belongs to some label -->
+    <!-- use required if you need that informathin and without that form wont process further  -->
+    <!-- password me spacific pattern bhi restrict kar sakte hai -->
+    <form action="post">
+      <div>
+        <label for="username">Enter your username</label>
+        <!--label ke for me usse related input tag ki id dete hai it uniquely identify its element -->
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          autofocus
+        />
+      </div>
+      <div>
+        <!-- both lable has unique id and name="gender" is same this is why only one will be selecter not both.name same hai to dono me se ek hi select hoga.if your id mismatch then when you click on that name it wont be selected -->
+        <input type="radio" id="male" name="gender" />
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender" />
+        <label for="female">female</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="news" value="yes" />
+        <label for="news">Subscribe for news </label>
+      </div>
+      <div>
+        <label for="comnet">Enter your coment : </label>
+        <textarea name="coment" id="comnet" rows="4" cols="30"></textarea>
+      </div>
+      <div>
+        <select name="fruits">
+          <option value="none">none</option>
+          <option value="grapes">grapes</option>
+          <option value="apple">apple</option>
+          <option value="mango">mango</option>
+          <option value="banana">banana</option>
+        </select>
+      </div>
+    </form>
+  </body>
+</html>
