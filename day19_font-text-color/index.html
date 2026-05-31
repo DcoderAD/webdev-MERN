@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font-text-color in css</title>
+    <!-- changing font-family  -->
+    <!-- always put some generic font family so if any font family is not available in the clients system then most common or generic font family applied automatically -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+      h1 {
+        font-family: "Baloo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight:weight;
+        font-style:normal;
+      }
+
+      p {
+        /* main font 'Gill sans' hai wo available nahi hua to pichhe likhe hue fallback fonts apply karne ki try krega system */
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 30px;
+        line-height: 1.2 ;
+        /* standard line-height search on google its around 1.2 to 1.6  */
+        letter-spacing: 2;
+        /* letter-spacing is used less */
+
+
+
+        /* how does fonts looks like visit https://codepen.io/web-dot-dev/pen/yLojraG */
+
+        /* you can use google fonts like balloo bhai fonts and etc  https://fonts.google.com/ */
+
+        /* you can include font using two methods
+            (1).link tag
+            (2).import in style tag */
+
+        /* it is recommanded that as many fonts you want to import just download them at once and it will generate single link for import all those fonts at once in a single link nd you dont need to import every font individually */
+
+        /* which one font will be written in first place it will be applied */
+      }
+      h2{
+        /* will turn first letter of every word capital */
+        text-transform: capitalize;
+        text-transform: lowercase;
+        text-transform: uppercase;
+        text-decoration: underline;
+        /*text decoration color are useful when we make navbars */
+        text-decoration-color: aqua;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 7px;
+        /* it will give indent to the text */
+        text-indent: 45px;
+      }
+    
+      .lorem{
+        /* text overflo hone pe change kr skte hai behavour */
+        border: 2px solid;
+        width: 145px;
+        text-overflow: clip;
+        overflow: hidden;
+        word-break: break-all;
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <h1>fonts</h1>
+      <h2>this is font lecture</h2>
+      <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque commodi architecto, libero minus ut quaerat officiis nam recusandae id, dolores fuga hic iure cumque nulla? Corrupti nisi nemo dolorem dolore omnis aperiam.</p>
+    </div>
+  </body>
+</html>

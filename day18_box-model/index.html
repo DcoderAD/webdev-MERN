@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model- margin,border,padding</title>
+    <!-- whatever we create in css using html element like div ,container,span anything all are box which has some margin,border and padding -->
+
+    <!-- hirearchy of box modle -->
+    <!-- content->padding->border->margin -->
+    <style>
+              *{
+                  margin: 0;
+                  padding: 0;
+              }
+              .box{
+                  background-color: aqua;
+              }
+              .box1{
+                  color: yellow;
+                  /* background color padding wale area tak hi rahega margin wale area tak nahi  */
+                  padding: 10px;
+                  /* margin element ke bahar apply hoti hai so background retain nahi hoga */
+                  margin: 25px;
+                  /* border inspect krne par different number dikha sakta hai because screen pixels density screens ki different different hoti hai */
+                  border: .5px solid black;
+                  height: 200px;
+                  /* boxsizing bordr box dene se height total 200 ho jayegi including padding and border...margin add nahi hoga   */
+                  box-sizing: border-box;
+                  /*suppose height ya width 200 set krne ke sath boxsizing border box nahi use kiya to only content ki height ya width 200 hogi or border box use kiya to padding and border and content ki overall size 200 hogi this is important remenber this  */
+              }
+
+
+
+              .box2{
+                  color: red;
+                  
+          color: rgb(171, 54, 76);
+          padding:10px;
+          margin:40px;
+          border:.5px solid black;
+          height: 200px;
+          box-sizing: border-box;
+
+          /* box-sizing: border-box ka concept specially tab kam aayega jab ham figma files ko html,css js me convert karenge in projects; */
+      }
+      /* jiski margin maximum hogi wo overlap kardegi ise margin collapse kahte hai in our case ye box2 wali  40 ho jayegi na ki box1 ki 25 */
+              
+    </style>
+  </head>
+  <body>
+    <div class="box box1">i am a div</div>
+    <div class="box box2">i am another div</div>
+  </body>
+</html>

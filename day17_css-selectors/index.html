@@ -5,13 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css selector</title>
     <link rel="stylesheet" href="style.css">
+    <!-- will learn in this one to apply the styling using elements name,id,and class and their rules -->
+
+    <!-- will use internal css so we can see how things work properly -->
     <style>
         
+        /* element selectors */
+        div{
+            background-color: red;
+        }
+        
+        
+        /* class selector */
+        .red{
+            background-color: aqua;
+        }
+
+        
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+
+
+        /* child selector */
+        /* apply only on the immediate chile of div */
+        div > p{
+            color: white;
+            background-color:black;
+        }
+        
+    
+
+        /* descendant selector */
+        /* div me p ho chahe direct ho ya kisi or element ke through ho it will apply all the p in div */
+        div p{
+            color:blueviolet
+        }
+
+
+
+        /* universal selector */
+        /* apply on all the elements universally */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* pseudo selectors */
+        /* you can change the color or behaviour of link etc */
+        a:visited{
+            color: yellowgreen;
+        }
+
+        /* can choose link color on your own choice */
+        a:link{
+            color: cadetblue;
+
+        }
+        /* using pseudo selector can chage behavour */
+        a:hover{
+            background-color: rgb(48, 194, 194);
+        }
+        /* when you click that link color will popup */
+        a:active{
+            background-color: chartreuse;
+        }
+
+        p:first-child{
+            background-color: bisque;
+        }
+
+
     </style>
 </head>
 <body>
-    <!-- will learn in this one to apply the styling using elements name,id,and class and theit rules -->
+    <div class="red">
+        i am div1 with class red
+        <p>Lorem ipsum dolor sit amet.</p>
+        <article>
+            <!-- this p is in article element not immediate child of div so child selector wont work here -->
+            <p>article paragraph lorem2</p>
+        </article>
+    </div>
+    <div>
+        i am div2 
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <div id="green">
+        i am div3 with id green
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, iusto voluptatibus!</p>
+    </div>
 
-    <!-- will use internal css so we can see how things work properly -->
+    <a target="_blank" href="https://www.google.com">go to google</a>
+    <br>
+    <a target="_blank" href="https://www.youtube.com">go to youtube</a>
+
+    <div>
+        <p>first chile of div</p>
+        <p>second child of div</p>
+    </div>
 </body>
 </html>
