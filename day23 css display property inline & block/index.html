@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css display property</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid blue;
+        /* can change display property to inline ,block or flex etc. */
+        /* display: inline; */
+        display: inline-block;
+        padding: 45px; /*padding and margin  both won't apply from the top why?? inline element do not respect the padding from top remember this .so you need to use inline-block property for this*/
+        margin:35px; 
+      }
+      .box1{
+        /* display:none; */ /* it will remove the box and dont reserve the space*/
+        /*  visibility: hidden; it will hide the box but reserve the space for it */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- css display property -->
+    <!-- change element's inline and block property using css  -->
+    <div class="box box1">i am a div box</div>
+    <div class="box">also a nice box</div>
+
+    <span>i am a good</span>
+    <span>boy</span>
+  </body>
+</html>
