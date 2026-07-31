@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variables</title>
+    <!-- you can declare global css variable using :root in css.what is the use of it ????/?
+     so if you are using --color and --seccolor 50 times in the website .so you dont need to change them 50 times in individual elements.just change the color from :root variable and it will change in the entire website whereever it was used -->
+    <style>
+        /* :root creates global variable of css */
+        :root{
+            --color:rgb(121, 233, 117);
+            --seccolor:rgb(141, 212, 178);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            /* background-color: greenyellow; */
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            list-style: none;
+            padding: 34px;
+        }
+
+        ul li:first-child{
+            /* here --color is local var which is overriding global var */  
+            --color:orange;
+            background-color:var(--color,red);
+            /* if there is --color var available in local or global it will apply but if there is  no --color var, not in the global or not in the local then for backup we are giving a color like in above case ,red */
+        }
+
+        .container{
+            /* background-color: rgb(186, 220, 134); */
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia consequatur nulla earum ullam libero cupiditate, placeat nam voluptatum veritatis ratione totam suscipit? Ducimus, iure non sint alias quia in ipsa saepe, id cupiditate molestiae asperiores error rerum impedit eos quasi ipsam recusandae reiciendis accusamus!
+    </div>
+</body>
+</html>

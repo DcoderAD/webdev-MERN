@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css overflow property
+    </title>
+    <style>
+        .box{
+            width: 20vw;
+            height: 40vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            overflow: auto;
+            /* overflow:auto; will give scrollbar only when text is getting overflow otherwise it wont show any scrollbar.and overfolow auto is recommanded because it shows scrollbar only when it needed. */
+            white-space:nowrap;/*text will be in one line*/
+            /* text-overflow: ellipsis; */ 
+            /* text overflow will show ...  */
+            overflow-x: scroll;
+            overflow-y: hidden  ;
+            /* you can write it in one line for x and y both see below line.auto is for x and hidden is for y */
+            /* overflow: auto hidden; */
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- some text or other things can overflow from the border which can be controlled using css overflow which creates scrollbar and controll the overflow. -->
+    <div class="box">
+        i a a good boy . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus, perferendis explicabo quae tempore nesciunt delectus corporis quos quia cum eum iste necessitatibus ratione doloribus, error sapiente voluptatum veritatis aliquam nulla, officia molestias temporibus!
+    </div>
+</body>
+</html>
