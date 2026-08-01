@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Queries</title>
+    <style>
+      body {
+        background-color: red;
+      }
+      /* we can select the meda type like only screen,all,speach etc. */
+      /* maximum time you will use below format 90to95% time */
+      /* @media not|only mediatype and (expressions) 
+      {Css-code; }*/
+      /* but if we use framworks then we dont use media queries because framworks itself use them in the background like tailwind css, bootstrap */
+      /* but when we are writing raw css not using any framwork for it then we will definately use the media queries remember these. */
+      
+      @media screen and (orientation: portrait)
+      {
+        body{
+          border: 2px solid purple;
+        }
+      }
+      
+      
+      @media only screen and (max-width:455px)
+      {
+        body{
+          background-color: blue;
+        }
+        .boxes{
+          flex-direction: column ;
+        }
+      }
+
+      .boxes{
+        display: flex;
+      }
+      .box{
+        width: 344px;
+        height: 344px;
+        background-color: aquamarine;
+        padding: 3px;
+        margin: 3px;
+         
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- making websites responsive is essential these days and media Queries are most important css property. -->
+
+    <!-- you can change the style of the website based on what device you are using to open that website like phone or laptop etc -->
+    <div>hey i am a red bg color page</div>
+    <div class="boxes">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
