@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css float and clear</title>
+    <!-- after flexbox these float and clear are in less use but we should know about them -->
+    <style>
+        img{
+            /* NOTE:-->>
+            never use float and clear property.never means never use it.just for the knowlwdge we will study it. */
+
+            /* float left will allow it to float left and allow other content to be in the right side of it . */
+
+            /* after using float property it does not follow the border and border se bahar nikal jaygi image of its parent element.so we need to set display:flow root in the parent element  */
+
+            /* in second paragrapg there is lots of text but it wont be hidden by image .we used these property for some news in newspapre with image and text  */
+
+            /* when we use "clear:right or left or both" in any element then it wont allow to float any element in that side of boundry */
+
+            float: left;
+        }
+
+        .cards
+        {
+            border:2px solid black;
+            display: flow-root;
+            
+        }
+
+        .card
+        {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: left;
+            /* clear:right; */
+            /* clear:both; */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg" width="230px
+        " alt="">
+        <div class="card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam ullam, omnis sint quia vel eos corrupti asperiores perferendis, quibusdam neque nisi consectetur consequatur repudiandae explicabo possimus amet sed, cupiditate animi laudantium numquam? Quisquam, quae.</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde optio illum consectetur architecto tenetur! Consequatur dignissimos ullam dolore quidem soluta quisquam sit ab velit iste vero est delectus perferendis, blanditiis consectetur molestias quaerat ipsam sunt itaque explicabo doloribus laboriosam non possimus ipsa. Obcaecati mollitia minus suscipit sed! At vitae ipsum a excepturi, eos molestias quos exercitationem, ex unde saepe molestiae maxime quam error hic sit eum optio ratione earum esse aperiam voluptatum. Modi sit error molestiae fugiat recusandae voluptates magnam, voluptatum qui inventore consequuntur illo soluta quaerat consectetur adipisci suscipit iusto labore commodi dolor est eos porro amet sapiente. A, dolores aliquid. Ratione ipsam, culpa eum voluptatum eveniet vero dolore vitae minima natus et commodi aut fugiat sint numquam. Ullam, similique! Laudantium saepe libero tempore perferendis. Veritatis facere beatae, quos mollitia atque excepturi minus perferendis minima commodi? Quae est, tenetur neque libero amet praesentium quas autem nesciunt saepe beatae quam laboriosam necessitatibus iusto illum fugiat, possimus suscipit sint omnis ex asperiores! Assumenda nam excepturi sunt neque nisi! Quos labore porro in assumenda placeat consequuntur dolorem, dignissimos quisquam! Veniam, nostrum! Labore ad blanditiis mollitia quas officia neque dicta sint! Neque, doloremque animi quasi sunt iure ea? Unde tenetur illo, magni tempore aut hic illum, quam quod facere nulla architecto quibusdam, ea suscipit totam dolores eum incidunt optio. Ratione veniam numquam doloribus magni excepturi dolores sunt expedita maiores incidunt voluptas facilis aliquam, dicta deserunt eius?
+        </div>
+        <div class="card">card3</div>
+    </div>
+</body>
+</html>

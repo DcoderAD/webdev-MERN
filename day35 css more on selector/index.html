@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more css selector</title>
+    <style>
+      .box:first-child {
+        background-color: red;
+      }
+      /* first line only doesnt matter the size of the device.go and check in responsive  */
+      /* .box::first-line
+        {
+            background-color: aquamarine;
+        } */
+
+
+
+
+      /* below * universal selector will change color of all the elements in the boxes class. */
+      /* .boxes *
+        {
+            color: rgb(42, 29, 224);
+            border: 2px solid blueviolet;
+        } */
+
+
+
+
+
+
+
+
+      /* below here is attribute selector */
+      /* [data-color="primary"]{
+            margin-top: 50px;
+            padding-top: 33px;
+        } */
+
+
+
+
+
+      /* you can do grouping of all selectors at once in the attribute seletor .see below-->
+
+        p,a,.box,[data-color="primary"]{
+            margin-top: 50px;
+            padding-top: 33px;
+        } */
+
+      
+      
+      
+    /* changing color of nth child which is at even position */
+      /* .box:nth-child(even)
+        {
+        background-color: blueviolet;
+        } */
+
+      
+      
+      
+        /* nth last child */
+        /* .box:nth-last-child(1) {
+        color: aqua;
+      } */
+
+
+/* inserting element dynamically using css "before and after" below->.it is used very frequenly so this is important these before and after are sudo elements not selectors */
+      .boxes::before 
+      {
+        content:"i will be before main content";
+        color: blue;
+      }
+
+
+
+      .boxes::after 
+      {
+        content:"i will be after main content";
+        color: aquamarine;
+      }
+
+/* selection selectors will work for all the content.it wont be visible directly when you select content using mouse click then it will show that content with given color or property.below we used ::selection which will apply to all content.but we can be selective too.lile .boxes::selection so the property will apply only on the .boxes elements.and notice its not working with the content of before and  after selectors notice it first and last line wont be affacted by this selection property.. */
+      ::selection{
+        color: aqua;
+        background-color: black;
+      }
+
+
+      .box::first-letter
+      {
+        background-color: peru;
+        font-size: 45px;
+      }
+
+
+      input::placeholder{
+        color: blue;
+        background-color: rgb(196, 116, 12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div data-color="primary" class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+        repellendus at voluptates quibusdam voluptatem. Saepe minus quibusdam
+        error eos reprehenderit voluptatum fugit provident, cum consectetur et
+        maxime, beatae esse, accusantium nam nulla placeat?
+      </div>
+      <div class="box">hey i am a box</div>
+      <div class="box">hey i am a box</div>
+       <input type="text" placeholder="type your name here">
+    </div>
+  </body>
+</html>
