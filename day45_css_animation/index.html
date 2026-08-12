@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animation</title>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 30vw;
+            height: 80vh;
+        }
+
+        .box{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            align-items: center;
+            /* animation: ajaykaanimation 2s linear infinite alternate; */
+                                        /* or */
+            /* you can use multipleproperties at onece or saperately */
+                                        /* or */
+/* you can write multiple animation with comma saperated  like -->ajaykaanimation,ajaykaanimation2;*/
+            animation: ajaykaanimation,ajaykaanimation2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            /* animation-direction: reverse; */
+            animation-direction: alternate-reverse;
+            /* we use java script for animation play-state:paused */
+            /* animation-play-state: paused; */
+
+            /* you can use multiple property at once */
+            
+        }
+
+        /* you can write multiple animation @keyframes */
+        @keyframes ajaykaanimation {
+            from{
+                transform: translatex(10px);
+                background-color: brown;
+            }
+            to{
+                transform: translatex(300px);
+                background-color: aquamarine;
+            }
+        }
+
+        @keyframes ajaykaanimation2 {
+            0%{transform: rotate(100deg);}
+            20%{transform: rotate(130deg);}
+            50%{transform: rotate(200deg);}
+            80%{transform: rotate(250deg);}
+            100%{transform: rotate(300deg);}
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- transition and animation works similar but animation is more powerful and flexible -->
+     <!-- for useanimation in css we use keyframes rule and we can use multiple keyframes in one animation and we can also use multiple animations on one element -->
+     <div class="container">
+        <div class="box">
+            ajay
+        </div>
+     </div>
+</body>
+</html>

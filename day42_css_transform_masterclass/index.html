@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms MasterClass </title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(227, 222, 75);
+            border: 2px solid black;
+            /* transform: rotate(40deg); */
+            /* transform: rotate(.5turn); */
+            /* transform: rotatex(40deg); */
+            /* transform: rotateY(40deg); */
+            /* transform: rotatez(40deg); */
+            /* transform: scale(2); */
+            /* transform: scaley(4); */
+            /* transform: scale3d(); */
+            /* transform: skew(5deg); */
+            /* Note-skew does not apply to z axis remember it */
+            /* Note-you will use translate many time..you can apply multiple transforms at once */
+            /* if you give translate in - it will move the element in the negative direction like if you want to hide navbar */
+            transform:translatey(100%) skew(40deg) translatex(40%);
+            /* transform origin will determine the point around which the transform is applied */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 100vw;
+            height: 80 vh;
+            border: 2px solid rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- two type of transform in css 2D & 3D -->
+     <div class="container">
+        <div class="box">
+                box
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transition property</title>
+    <style>
+        .container{
+            background-color: aqua;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box{
+            background-color: sandybrown;
+             width: 5vw;
+            height: 4vh;
+            
+            
+            /* transition property used with these 4 below peoperty alsways try to use all these 4 whenever you need to use transition property */
+
+            /* transition-property:transform; 
+            transition-duration: 3s;
+            transition-timing-function:ease-in-out ;
+            transition-delay: 1s; */
+
+            /* all above properties in one line */
+            transition: transform 3s ease-in-out 1s;
+        }
+        .translate{
+            transform: translatex(10vw) translateY(10vh);
+        }
+    </style>
+</head>
+<body>
+    <!-- we use css transition for smooth visual transitions effects in our designs it is like animtion effects and eye appealing looks-->
+     <div class="container">
+        <div class="box translate">
+
+        </div>
+     </div>
+</body>
+</html>
