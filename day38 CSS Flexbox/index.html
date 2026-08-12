@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css flexbox</title>
+    <style>
+      /* NOTE-> few flexbox properties apply to container and few apply to items also */
+
+      .container
+       {
+        border: 2px solid red;
+        /* we are applying display:flex on container not on the items.and after applying it now we are elegible to use the property of flexbox. */
+
+        /* in case of row the main axis is horizontal and cross axis is vertical and in case of column the main axis is verticle and cross axis is horizontal */
+
+       /* there is no justify items in flex box property  */
+        display: flex;
+        height: 80vh;
+        /* justify and align item property are applied on container only not on the individual items remember it*/
+        /* justify-content: center; align according to flex direction and its main axis */
+         align-items: center;   
+        /* align items vertically according to its main axis */
+        /* flex-direction: column; */
+        flex-direction: row;
+        /* flex-wrap: wrap; to prevent overflow from the container and it will expand the container */
+        align-content: center;
+        /*when we need to align multiple lines of items  and align-item use for single line to align*/
+        flex-flow:row wrap-reverse;
+            /* gap: 30px;
+        row-gap: 40px;
+        column-gap: 10px; */
+        gap: 10px 40px; /*short hand for row and column gap */
+    }
+      .item {
+        /* flex-grow: 1; will expand the item to fill the available space. */
+        /* flex-shrink: 1; will shrink the item if necessary. */
+
+        /* if flex wrap is there then the items will wrap to the next line.so if you wan to use flex shrink just disable the flex wrap */
+        /* flex-grow: 1; */
+        flex-shrink:1;
+        height:62px;
+        width: 62px;
+        border: 2px solid black;
+        /* margin: 4px; */
+        background-color: blueviolet;
+        align-self: self-end;
+      }
+
+      /* whoever holds the highest weight its order will go to the last.default order is 0 */
+      /* order property is used to change the order(start ,end,in between somewhere) of flex items.and its the property of flex items not the container.     */
+      .order-1
+      {
+        order: 1;
+      }
+      .order-2
+      {
+        order: 2;
+      }
+
+      .order-3
+      { 
+        order: 3;
+      }
+
+      .item1
+      {
+        flex-grow: 2;
+        /* flex-grow :2 for a perticular item will make it double in the size compare to other items.whatever number you give it will expand accordingly. */
+        
+        /* one item will expand and other will shrink but all itemes will remain in one line */
+
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="item order-1 ">1</div>
+        <div class="item order-3" >2</div>
+        <div class="item " >2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item item1">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+      </div>
+    </main>
+  </body>
+</html>
